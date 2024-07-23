@@ -9,13 +9,6 @@ export const baseOptions: HomeLayoutProps = {
   nav: {
     title: 'LiterateInk',
   },
-  links: [
-    {
-      text: 'Documentation',
-      url: '/',
-      active: 'nested-url',
-    },
-  ],
 };
 
 // docs layout configuration
@@ -42,19 +35,57 @@ export const docsOptions: DocsLayoutProps = {
         options={[
           {
             title: 'Pawnote',
-            description: 'PRONOTE',
+            description: 'A purrfect API wrapper for PRONOTE',
             url: '/pawnote',
-            icon: <div className='size-9 shrink-0 rounded-md bg-gradient-to-t from-background/90 bg-blue-600/60 p-1.5'>
-              <Library className='text-blue-600 dark:text-blue-200' />
-            </div>,
+            icon: <></>,
+          },
+          {
+            title: 'Pawdirecte',
+            description: 'A purrfect API wrapper for EcoleDirecte',
+            url: '/pawdirecte',
+            icon: <></>,
+          },
+          {
+            title: 'Educawtable',
+            description: 'An awmazing API wrapper for Educartable',
+            url: '/educawtable',
+            icon: <></>, 
+          },
+          {
+            title: 'Meowdle',
+            description: 'A purrfect API wrapper for Moodle',
+            url: '/meowdle',
+            icon: <></>, 
+          },
+          {
+            title: 'Turbawself',
+            description: 'An awmazing API wrapper for Turboself',
+            url: '/turbawself',
+            icon: <></>, 
+          },
+          {
+            title: 'WebRestaw',
+            description: 'An awmazing API wrapper for WebResto',
+            url: '/webrestaw',
+            icon: <></>, 
+          },
+          {
+            title: 'PawRD',
+            description: 'An awmazing API wrapper for ARD GEC',
+            url: '/pawrd',
+            icon: <></>, 
+          },
+          {
+            title: 'Crowous',
+            description: 'A wrapper for the mobile API of Les Crous',
+            url: '/crowous',
+            icon: <></>, 
           },
           {
             title: 'Pawnilim',
-            description: 'Unilim',
+            description: 'A purrfect API wrapper for Unilim',
             url: '/pawnilim',
-            icon: <div className='size-9 shrink-0 rounded-md bg-gradient-to-t from-background/80 bg-purple-500/60 p-1.5'>
-              <Blocks className='text-purple-600 dark:text-purple-200' />
-            </div>, 
+            icon: <></>, 
           },
         ]}
       />
