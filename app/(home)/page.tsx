@@ -96,7 +96,7 @@ export default function HomePage() {
 
 export function generateMetadata() {
   return {
-    title: "Home",
-    description: "some homepage",
+    title: "LiterateInk: A home for our documentations",
+    description: "Comprehensive documentation for all our libraries with API references and detailed guides.",
   } satisfies Metadata;
 }
