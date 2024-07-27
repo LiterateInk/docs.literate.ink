@@ -1,4 +1,4 @@
-# docs.literate.ink
+# docs.literate.ink ![Netlify Status](https://api.netlify.com/api/v1/badges/ce2d6d27-5c7b-4442-bbf3-da0c7c51d402/deploy-status)
 
 Comprehensive documentation for all our libraries, complete with detailed API references and guides.
 
