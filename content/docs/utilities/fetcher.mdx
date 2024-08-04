@@ -1,0 +1,39 @@
+---
+title: Fetcher
+description: Write your custom fetcher for LiterateInk libraries
+---
+
+We provide a default fetcher exported as `defaultFetcher` that uses [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) under the hood.
+
+## Custom fetcher example with Tauri HTTP
+
+You need to create a custom fetcher to make it work with the [Tauri HTTP API](https://tauri.app/v1/api/js/http).
+
+Here's a simple one that should always work:
+
+```typescript
+import type { Fetcher } from "@literate.ink/utilities";
+import { Body, ResponseType, getClient } from "@tauri-apps/api/http";
+
+const tauriFetcher: Fetcher = async (req) => {
+  const client = await getClient(req.redirect === "manual" ? {
+    maxRedirections: 0
+  } : void 0);
+
+  const res = await client.request<string>({
+    url: req.url,
+    method: req.method,
+    headers: req.headers,
+    body: req.method !== "GET" && req.content ? Body.text(req.content) : void 0,
+    responseType: ResponseType.Text
+  });
+
+  return {
+    status: res.status,
+    headers: res.headers,
+    content: res.data  
+  }
+};
+
+export default tauriFetcher;
+```
