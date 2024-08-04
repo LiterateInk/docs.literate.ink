@@ -87,6 +87,12 @@ export const docsOptions: DocsLayoutProps = {
             url: '/pawnilim',
             icon: <></>, 
           },
+          {
+            title: 'Utilities',
+            description: 'For internal or advanced use only: a collection of utilities for our libraries.',
+            url: '/utilities',
+            icon: <></>, 
+          },
         ]}
       />
     ),
