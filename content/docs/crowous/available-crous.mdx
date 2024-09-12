@@ -1,0 +1,43 @@
+---
+title: Feeds
+description: Get a list of available feeds.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+ 
+## What is a feed?
+
+A feed is a specific Crous. There's multiple Crous in France, each one has its own feed.
+To access a feed you need to know its identifier, which is unique.
+
+You can access them using `feeds()` which returns a list of all available feeds.
+
+## Listing feeds
+
+<Tabs items={['JS/TS', 'Rust']}>
+```ts tab="JS/TS"
+import * as crous from "crowous";
+
+const feeds = await crous.feeds();
+
+for (const feed of feeds) {
+  console.log(`${feed.name} (${feed.identifier})`);
+}
+```
+ 
+```ts tab="Rust"
+// Not yet available!
+```
+</Tabs>
+
+```console title="output.txt"
+AIX-MARSEILLE (aix.marseille)
+AMIENS (amiens)
+ANTILLES-GUYANES (antilles.guyane)
+...
+```
+
+## What's next?
+
+You'll receive an `identifier` that can be used with `restaurants()`, for example, to retrieve the list of restaurants available for a given Crous.
