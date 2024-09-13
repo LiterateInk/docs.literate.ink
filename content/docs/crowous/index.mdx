@@ -3,20 +3,37 @@ title: Crowous
 description: A wrapper for the mobile API of Les Crous.
 ---
 
-Welcome! This guide is not yet available since the library is still in PoC phase.
+import { HomeIcon, UtensilsIcon } from 'lucide-react';
 
-A first version should be available at the end of 2024.
+[Les Crous](https://www.lescrous.fr/) (or Centres Régionaux des Œuvres Universitaires et Scolaires) in France are regional organizations that provide various services to students to enhance their quality of life.
 
-## Features
+[Les Crous' mobile app](https://play.google.com/store/apps/details?id=com.einden.crous.poitiers.android) facilitates student life by providing access to housing applications, meal plan management, scholarship information, and various support services directly from their smartphones.
 
-- [x] Find available Crous
-- [x] Find restaurants available for a given Crous
-- [x] Menus for a given restaurant
-
+ 
 ## Roadmap
+
+Most of these routes doesn't contain any interesting data - most of the time.
 
 - [ ] [News](http://webservices-v2.crous-mobile.fr/feed/:identifier/externe/actu.xml)
 - [ ] [Housing](http://webservices-v2.crous-mobile.fr/feed/:identifier/:identifier-logement.xml)
 - [ ] [Online Services](http://webservices-v2.crous-mobile.fr/feed/:identifier/:identifier-online.xml)
 
-<Card title="Check the progress on GitHub" href="https://github.com/LiterateInk/Crowous" />
+## Quick summary
+
+<Cards>
+  <Card
+    icon={<HomeIcon />}
+    href="/crowous/feeds"
+    title="Feeds"
+    description="Retrieve all feeds available."
+  />
+  <Card
+    icon={<UtensilsIcon />}
+    href="/crowous/restaurants"
+    title="Restaurants"
+    description="Find restaurants available in a Crous given its identifier."
+  />
+</Cards>
+
+## Supported languages
+
