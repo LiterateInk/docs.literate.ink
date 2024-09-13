@@ -1,0 +1,48 @@
+---
+title: Restaurants
+description: Get a list of available restaurants.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+
+## What is a restaurant?
+
+A restaurant is a place where you can find food.
+There's multiple restaurants in each Crous, you can retrieve restaurants using the `restaurants(identifier)` method where `identifier` is the Crous identifier - that you can find using `feeds()`.
+
+## Listing restaurants
+
+<Tabs items={['JS/TS', 'Rust']}>
+```ts tab="JS/TS"
+import * as crous from "crowous";
+
+const identifier = "limoges";
+const restaurants = await crous.restaurants(identifier);
+
+for (const restaurant of restaurants) {
+  console.log(restaurant.title);
+  console.log("=>", restaurant.address);
+  console.log();
+}
+```
+ 
+```ts tab="Rust"
+// Not yet available!
+```
+</Tabs>
+
+```console title="output.txt"
+KIOSQUE ENSIL
+=> Ester Technopole 16 rue Atlantis 87000 LIMOGES
+RU Thérèse Menot
+=> 24 allée de la cornue 87000 Limoges
+RU Brive
+=> 21 rue André DEVAUD
+RU ENSIL
+=> Ester Technopole 16 rue Atlantis 87000 LIMOGES
+RU La Borie
+=> 185 avenue Albert Thomas 87065 LIMOGES
+Cafétéria de La Borie
+=> 185 avenue Albert Thomas
+```
