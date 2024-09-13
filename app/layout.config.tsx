@@ -1,8 +1,7 @@
 import { type DocsLayoutProps } from 'fumadocs-ui/layout';
 import { type HomeLayoutProps } from 'fumadocs-ui/home-layout';
 import { RootToggle } from 'fumadocs-ui/components/layout/root-toggle';
-import { pageTree } from '@/app/source';
-import { Blocks, Library } from 'lucide-react';
+import { source } from '@/lib/source';
 
 // shared configuration
 export const baseOptions: HomeLayoutProps = {
@@ -14,7 +13,7 @@ export const baseOptions: HomeLayoutProps = {
 // docs layout configuration
 export const docsOptions: DocsLayoutProps = {
   ...baseOptions,
-  tree: pageTree,
+  tree: source.pageTree,
   githubUrl: "https://github.com/LiterateInk",
   links: [
     {
