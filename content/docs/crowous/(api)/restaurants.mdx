@@ -13,7 +13,7 @@ There's multiple restaurants in each Crous, you can retrieve restaurants using t
 
 ## Listing restaurants
 
-<Tabs items={['JS/TS', 'Rust']}>
+<Tabs items={['JS/TS', 'Kotlin', 'Rust']}>
 ```ts tab="JS/TS"
 import * as crous from "crowous";
 
@@ -27,6 +27,21 @@ for (const restaurant of restaurants) {
 }
 ```
  
+```ts tab="Kotlin"
+import ink.literate.crowous.api.restaurants;
+
+fun main() {
+  val identifier = "limoges"
+  val restaurants = restaurants(identifier)
+
+  for (restaurant in restaurants) {
+    println(restaurant.title)
+    println("=>", restaurant.address)
+    println()
+  }
+}
+```
+
 ```ts tab="Rust"
 // Not yet available!
 ```

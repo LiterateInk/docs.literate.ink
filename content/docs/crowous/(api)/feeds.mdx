@@ -17,7 +17,7 @@ You can access them using `feeds()` which returns a list of all available feeds.
 
 Let's say we want to list all available feeds by showing their name and identifier.
 
-<Tabs items={['JS/TS', 'Rust']}>
+<Tabs items={['JS/TS', 'Kotlin', 'Rust']}>
 ```ts tab="JS/TS"
 import * as crous from "crowous";
 
@@ -28,6 +28,18 @@ for (const feed of feeds) {
 }
 ```
  
+```ts tab="Kotlin"
+import ink.literate.crowous.api.feeds;
+
+fun main() {
+  val feeds = feeds()
+
+  for (feed in feeds) {
+    println("${feed.name} (${feed.identifier})")
+  }
+}
+```
+
 ```ts tab="Rust"
 // Not yet available!
 ```
