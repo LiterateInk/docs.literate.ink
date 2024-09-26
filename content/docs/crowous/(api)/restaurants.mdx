@@ -28,15 +28,15 @@ for (const restaurant of restaurants) {
 ```
  
 ```ts tab="Kotlin"
-import ink.literate.crowous.api.restaurants;
+import ink.literate.crowous.api.restaurants
 
-fun main() {
+suspend fun main() {
   val identifier = "limoges"
   val restaurants = restaurants(identifier)
 
   for (restaurant in restaurants) {
     println(restaurant.title)
-    println("=>", restaurant.address)
+    println("=> ${restaurant.address}")
     println()
   }
 }
