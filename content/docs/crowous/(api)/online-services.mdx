@@ -1,0 +1,39 @@
+---
+title: Online Services
+description: Retrieve online services the feed gives you.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+
+## Listing online services
+
+<Tabs items={['JS/TS', 'Kotlin', 'Rust']}>
+```ts tab="JS/TS"
+import * as crous from "crowous";
+
+const onlineServices = await crous.onlineServices("bordeaux");
+
+for (const onlineService of onlineServices) {
+  console.log(`- ${onlineService.title} : ${onlineService.shortDescription ?? "(no description)"} @ ${onlineService.url}`);
+}
+```
+ 
+```kotlin tab="Kotlin"
+// Not yet available!
+```
+
+```rust tab="Rust"
+// Not yet available!
+```
+</Tabs>
+
+```console title="output.txt"
+- Payer avec Izly : Accéder à mon compte @ http://www.izly.fr/
+- Suivez-nous sur Facebook ! : (no description) @ http://www.facebook.com/crous.debordeauxaquitain
+...
+```
+
+Note that `shortDescription` could be `null` if the online service doesn't have a description.
+
+Also, sometimes, given URLs could be outdated or are not working anymore, sadly we can't do anything about it.

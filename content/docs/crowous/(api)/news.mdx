@@ -1,0 +1,40 @@
+---
+title: News
+description: Read latest news concerning a given feed.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+
+## Listing news
+
+Let's say we want to list latest news by showing their name and category, but not their content.
+
+<Tabs items={['JS/TS', 'Kotlin', 'Rust']}>
+```ts tab="JS/TS"
+import * as crous from "crowous";
+
+const news = await crous.news("limoges");
+
+for (const article of news) {
+  console.log(`[${article.category}]: ${article.title}, published @ ${article.publicationDate.toLocaleDateString()}`);
+  // You can retrieve the HTML content of the article by using `article.content`.
+  // We're not doing it here to avoid cluttering the console.
+}
+```
+ 
+```kotlin tab="Kotlin"
+// Not yet available!
+```
+
+```rust tab="Rust"
+// Not yet available!
+```
+</Tabs>
+
+```console title="output.txt"
+[restos]: Le Crous recrute pour la rentrée, published @ 7/1/2022
+[general]: Le paiement des bourses, published @ 12/15/2021
+[aides]: PLATEFORME D’ÉCOUTE ET DE SOUTIEN PSYCHOLOGIQUE, published @ 7/21/2021
+...
+```

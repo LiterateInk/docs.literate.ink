@@ -3,7 +3,7 @@ title: "Introduction: Crowous"
 description: A wrapper for the mobile API of Les Crous.
 ---
 
-import { HomeIcon, UtensilsIcon } from 'lucide-react';
+import { HomeIcon, UtensilsIcon, GlobeIcon, NewspaperIcon } from 'lucide-react';
 
 [Les Crous](https://www.lescrous.fr/) (or Centres Régionaux des Œuvres Universitaires et Scolaires) in France are regional organizations that provide various services to students to enhance their quality of life.
 
@@ -13,9 +13,7 @@ import { HomeIcon, UtensilsIcon } from 'lucide-react';
 
 Most of these routes doesn't contain any interesting data - most of the time.
 
-- [ ] [News](http://webservices-v2.crous-mobile.fr/feed/:identifier/externe/actu.xml)
 - [ ] [Housing](http://webservices-v2.crous-mobile.fr/feed/:identifier/:identifier-logement.xml)
-- [ ] [Online Services](http://webservices-v2.crous-mobile.fr/feed/:identifier/:identifier-online.xml)
 
 ## Quick summary
 
@@ -31,5 +29,17 @@ Most of these routes doesn't contain any interesting data - most of the time.
     href="/crowous/restaurants"
     title="Restaurants"
     description="Find restaurants available in a Crous given its identifier."
+  />
+  <Card
+    icon={<GlobeIcon />}
+    href="/crowous/online-services"
+    title="Online Services"
+    description="Retrieve online services the feed gives you."
+  />
+  <Card
+    icon={<NewspaperIcon />}
+    href="/crowous/news"
+    title="News"
+    description="Read news concerning the given feed."
   />
 </Cards>
