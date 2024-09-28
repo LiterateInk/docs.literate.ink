@@ -1,0 +1,41 @@
+---
+title: Housing
+description: Read housing items concerning the given feed.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+
+## Listing
+
+<Tabs items={['JS/TS', 'Kotlin', 'Rust']}>
+```ts tab="JS/TS"
+import * as crous from "crowous";
+
+const houses = await crous.housing("bordeaux");
+
+for (const home of houses) {
+  // When the address is not available, we show the longitude and latitude directly.
+  console.log(`[${home.area}]: ${home.title} (${home.address ?? `lon: ${home.longitude}, lat: ${home.latitude}`})`);
+}
+```
+ 
+```kotlin tab="Kotlin"
+// Not yet available!
+```
+
+```rust tab="Rust"
+// Not yet available!
+```
+</Tabs>
+
+```console title="output.txt"
+[Talence]: Village n°1 rénové (avenue de Collégno 33400 Talence)
+[Bordeaux]: Résidence La Boétie (57 rue Saint James 33000 BORDEAUX)
+[Bordeaux]: Résidence Maison des Etudiants (50 rue Ligier 33000 Bordeaux)
+[Bordeaux]: Résidence Clairefontaine 1 (13 rue Francisco Ferrer 33700 Merignac)
+[Bordeaux]: Carreire (4 rue du Docteur Rocaz 33000 BORDEAUX)
+...
+```
+
+Note that a lot of properties can be `null` in there, so be sure to check for `null` values before using them.
